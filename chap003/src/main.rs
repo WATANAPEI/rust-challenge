@@ -1,10 +1,7 @@
 use std::env;
 
-fn lcm(v: &Vec<i32>) -> &i32 {
-    match v.last() {
-        Some(e) => e,
-        None => { panic!("something went wrong"); },
-    }
+fn lcm(v: &Vec<i32>) -> i32 {
+    v.into_iter().fold(1, |prod, x| prod * x )
 }
 
 fn main() {
@@ -14,6 +11,6 @@ fn main() {
         return;
     }
     let nums: Vec<i32> = args[1..].into_iter().map(|x| x.parse().unwrap()).collect();
-    let result: &i32 = lcm(&nums);
+    let result: i32 = lcm(&nums);
     println!("lcm is {}", result);
 }
