@@ -1,8 +1,19 @@
 use std::env;
 
 fn gcd(a: i32, b: i32) -> i32 {
-    let mut gcd: i32 = 0;
-    return gcd;
+    let mut dividend = if a > b { a } else { b };
+    let mut divisor = if a > b { b } else { a };
+    //println!("dividend is {}, divisor is {}", dividend, divisor);
+    loop {
+        let remaining = dividend % divisor;
+        //println!("dividend is {}, divisor is {}", dividend, divisor);
+        //println!("remaining is {}", remaining);
+        if remaining == 0 {
+            return divisor;
+        }
+        dividend = divisor;
+        divisor = remaining;
+    }
 }
 
 
