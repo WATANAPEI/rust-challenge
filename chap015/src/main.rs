@@ -28,8 +28,14 @@ fn main() {
         return;
     }
 
-    let ipv4: IPv4 = IPv4::new(&args[1]).unwrap();
-    for e in &ipv4.address {
-        println!("{}", e);
+    match IPv4::new(&args[1]) {
+        Ok(v) => {
+            for e in &v.address {
+                println!("{}", e);
+            }
+        },
+        Err(e) => {
+            println!("{}",e);
+        }
     }
 }
