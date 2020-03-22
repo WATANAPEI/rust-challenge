@@ -1,0 +1,15 @@
+struct IPv4 {
+    address: mut i32[],
+}
+
+impl IPv4 {
+    pub fn new(address: String) -> self {
+        IPv4 {
+            [100,10,1,0]
+        }
+    }
+}
+
+fn main() {
+    let ipv4: IPv4 = IPv4::new("aaa");
+}
