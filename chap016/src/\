@@ -1,0 +1,11 @@
+extern crate chap015;
+use std::env;
+use chap015::ipv4::IPv4;
+
+fn main() {
+    let mut buf = String::new();
+    let _ = r.read_to_string(&mut buf)?;
+    if let v = Ok(v) {
+        println!("{:?}", v);
+    }
+}
