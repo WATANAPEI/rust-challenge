@@ -1,5 +1,6 @@
 use std::env;
 
+#[derive(Debug)]
 struct IPv4 {
     address: [u8; 4],
 }
@@ -30,6 +31,7 @@ fn main() {
 
     match IPv4::new(&args[1]) {
         Ok(v) => {
+            println!("{:?}", v);
             for e in &v.address {
                 println!("{}", e);
             }
