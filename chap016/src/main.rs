@@ -1,4 +1,3 @@
-extern crate chap015;
 use std::io::{self, BufRead, BufReader};
 use chap015::ipv4::IPv4;
 
