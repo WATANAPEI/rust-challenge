@@ -7,13 +7,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut line = String::new();
     let mut stdio_buffer = BufReader::new(std::io::stdin());
     let _ = stdio_buffer.read_line(&mut line)?;
-    let mut trimmed_line = &line.trim();
-    print!("echo: {}", &line);
-    let ip_from = IPv4::new(&trimmed_line);
-    line.clear();
+    let ip_from = IPv4::new(&line);
+    print!("echo: {}", line);
     let _ = stdio_buffer.read_line(&mut line)?;
-    let trimmed_line = &line.trim();
-    let ip_to = IPv4::new(&trimmed_line);
-    print!("echo: {}", &line);
+    let ip_to = IPv4::new(&line);
+    print!("echo: {}", line);
     Ok(())
 }
