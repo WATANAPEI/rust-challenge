@@ -1,5 +1,3 @@
-use std::mem;
-
 pub mod ipv4 {
     #[derive(Debug)]
     pub struct IPv4 {
@@ -20,10 +18,11 @@ pub mod ipv4 {
                 address: [v[0], v[1], v[2], v[3]],
             })
         }
-        pub fn calc_dist(mut ip_from: IPv4, mut ip_to: IPv4) {
-            if ip_from.address[0] > ip_to.address[0] {
-                std::mem::swap(&mut ip_from, &mut ip_to);
-            }
+    }
+
+    pub fn calc_dist(mut ip_from: IPv4, mut ip_to: IPv4) {
+        if ip_from.address[0] > ip_to.address[0] {
+            std::mem::swap(&mut ip_from, &mut ip_to);
         }
     }
 }
