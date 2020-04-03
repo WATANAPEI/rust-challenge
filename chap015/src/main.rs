@@ -1,7 +1,6 @@
 extern crate chap015;
-use std::env;
 use chap015::ipv4::IPv4;
-
+use std::env;
 
 fn print_usage(args: &Vec<String>) {
     println!("usage: {} address ", &args[0]);
@@ -21,9 +20,9 @@ fn main() {
             for e in &v.address {
                 println!("{}", e);
             }
-        },
+        }
         Err(e) => {
-            println!("{}",e);
+            println!("{}", e);
         }
     }
 }

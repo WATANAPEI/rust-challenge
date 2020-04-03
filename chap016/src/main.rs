@@ -9,6 +9,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let _ = stdio_buffer.read_line(&mut line)?;
     let mut trimmed_line = &line.trim();
     print!("echo: {}", &line);
+    println!("to: ");
     let ip_from = IPv4::new(&trimmed_line);
     line.clear();
     let _ = stdio_buffer.read_line(&mut line)?;
