@@ -24,5 +24,6 @@ pub mod ipv4 {
         if ip_from.address[0] > ip_to.address[0] {
             std::mem::swap(&mut ip_from, &mut ip_to);
         }
+        println!("calc_dist is called");
     }
 }
