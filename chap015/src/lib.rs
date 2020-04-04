@@ -23,6 +23,7 @@ pub mod ipv4 {
     pub fn calc_dist(mut ip_from: IPv4, mut ip_to: IPv4) {
         if ip_from.address[0] > ip_to.address[0] {
             std::mem::swap(&mut ip_from, &mut ip_to);
+            println!("ip_from: {:?}, ip_to: {:?}", ip_from.address, ip_to.address);
         }
         println!("calc_dist is called");
     }
